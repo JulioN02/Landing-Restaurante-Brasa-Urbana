@@ -1,91 +1,212 @@
-# Brasa Urbana — Sistema Web Comercial Modular (v1.0)
+# 🍽️ Brasa Urbana — Sistema Landing Page para Restaurantes
 
-Landing Page profesional orientada a conversión para restaurante ficticio **Brasa Urbana**, construida con Vite + TypeScript (fundamentos), bajo arquitectura modular por capas.  
+**Versión:** 1.0  
+**Estado:** Completado  
+**Stack:** Vite + HTML + CSS modular + TypeScript  
+**Tipo de Proyecto:** Plantilla profesional reutilizable para restaurantes  
 
-Este proyecto no es una maqueta estática: es la base técnica de un sistema comercial escalable hacia arquitectura fullstack.
+## 🎯 Propósito del Proyecto
 
-## 1. Propósito
+**Brasa Urbana** no es solo una landing page visual.
 
-Construir una Landing Page de conversión para restaurantes locales con:
+Es una **plantilla profesional estructurada para restaurantes** diseñada para:
 
-- Arquitectura modular clara
-- Separación estricta de responsabilidades
-- Alto rendimiento
-- Escalabilidad futura hacia API REST
-- Base comercial reutilizable
+- Aumentar reservas  
+- Mostrar menú dinámico  
+- Generar confianza  
+- Escalar fácilmente hacia backend futuro  
+- Ser reutilizable para múltiples negocios gastronómicos  
 
-Diseñado para evolucionar a:
+Este proyecto funciona como:
 
-- Backend con Node + Express + PostgreSQL
-- Autenticación JWT
-- Panel administrativo
-- SaaS multi-tenant
+- Demo comercial vendible  
+- Base técnica escalable  
+- Plantilla replicable para distintos nichos  
 
-## 2. Stack Tecnológico
+## 🧠 Enfoque Estratégico
 
-- Vite
-- TypeScript (uso limitado a fundamentos)
-- HTML semántico
-- CSS modular con sistema de tokens
-- JavaScript moderno (sin frameworks)
+El sistema fue concebido con una lógica clara:
 
-## 3. Arquitectura Aplicada
+> Simplicidad estructural + Arquitectura limpia + Sistema visual coherente + Enfoque en conversión
 
-Arquitectura modular por capas:
+No se diseñó únicamente desde la estética.  
+Se diseñó desde:
 
-UI → Application → Domain  
-Infrastructure implementa contratos  
-Domain no depende del DOM  
+- Psicología de conversión  
+- Arquitectura frontend escalable  
+- Modularidad real  
+- Performance  
+- Reutilización comercial  
 
-Objetivo: evitar acoplamiento, permitir migración futura a cliente-servidor y prevenir refactor destructivo.
+## 🏗️ Cómo Fue Propuesto
 
-## 4. Estructura del Proyecto
-src/
-├─ main.ts
-├─ domain/
-├─ application/
-├─ infrastructure/
-├─ ui/
-├─ styles/
-└─ assets/
+Se partió de un modelo de restaurante ficticio:
 
-### domain/
-- Modelos tipados
-- Reglas puras
-- Lógica independiente del DOM
+**Brasa Urbana — Parrilla contemporánea urbana**
 
-### application/
-- Casos de uso
-- Orquestación del flujo
-- Transformación de datos
+El objetivo no era crear un restaurante específico, sino un **caso de uso adaptable**.
 
-### infrastructure/
-- Fuente de datos local
-- Implementaciones concretas
+La arquitectura psicológica de la landing sigue el modelo:
 
-### ui/
-- Renderizado DOM
-- Componentes
-- Event handlers separados
+> Impacto → Interés → Deseo → Confianza → Acción
 
-### styles/
-- Tokens CSS
-- Sistema tipográfico
-- Layout responsive
+### Estructura fija de conversión
 
-## 5. Requerimientos Funcionales (v1.0)
+- Hero impactante  
+- Propuesta de valor  
+- Menú filtrable  
+- Galería visual  
+- Testimonios  
+- Ubicación  
+- CTA final + WhatsApp persistente  
 
-- Render dinámico desde datos tipados
-- Filtro por categorías sin recarga
-- Generación dinámica de enlace WhatsApp
-- Producto destacado automático
-- Botón flotante mobile persistente
+Esta estructura es replicable a:
 
-## 6. Requerimientos No Funcionales
+- Sushi  
+- Cafeterías  
+- Bares  
+- Restaurantes familiares  
+- Comida rápida premium  
 
-- Lighthouse > 90
-- Carga inicial < 2s
-- Mobile-first
-- Accesibilidad AA
-- HTML semántico correcto
-- Sin layout shift significativo
+## 🧱 Cómo Fue Construido
+
+El sistema fue desarrollado bajo una **arquitectura modular por capas**.
+
+Separación clara entre:
+
+- **Estructura** (HTML semántico)  
+- **Presentación** (CSS modular)  
+- **Interacción** (TypeScript organizado)  
+- **Datos** (tipados y desacoplados del DOM)  
+
+El CSS no es una hoja improvisada.
+
+Se implementó un sistema estructurado en capas:
+
+> Reset → Variables → Base → Layout → Componentes → Utilidades
+
+Esto permite:
+
+- Bajo acoplamiento  
+- Alta cohesión  
+- Fácil mantenimiento  
+- Escalabilidad futura  
+
+## 🎨 Sistema Visual
+
+Se construyó un sistema de diseño completo con:
+
+- Tokens de color centralizados  
+- Escala tipográfica consistente  
+- Sistema de espaciado uniforme  
+- Breakpoints definidos  
+- Componentes reutilizables  
+- Estados visuales controlados por clases  
+
+No hay valores repetidos sin tokenizar.
+
+El branding puede cambiar modificando variables, sin necesidad de refactor estructural.
+
+## ⚙️ Características Funcionales
+
+- Render dinámico de productos  
+- Sistema de filtros por categoría  
+- Identificación de producto destacado  
+- Galería responsive con lazy loading  
+- Testimonios estructurados  
+- Botón flotante de WhatsApp persistente  
+- CTA dinámico parametrizable  
+- Arquitectura preparada para backend futuro  
+
+## 📱 Responsive y Performance
+
+El diseño sigue filosofía **mobile-first**.
+
+Validado en:
+
+- Móviles pequeños  
+- Tablets  
+- Desktop estándar  
+- Pantallas grandes  
+
+Optimizado para:
+
+- Carga rápida  
+- Bajo peso  
+- Transiciones eficientes  
+- Sin layout shift  
+- Lighthouse alto  
+
+## ♿ Accesibilidad
+
+Incluye:
+
+- HTML semántico correcto  
+- Estados focus visibles  
+- Contraste adecuado  
+- ARIA en componentes interactivos  
+- Respeto a `prefers-reduced-motion`  
+
+## 🧩 Escalabilidad
+
+El sistema está preparado para evolucionar hacia:
+
+- **v2.0 →** API REST (Node + Express + PostgreSQL)  
+- **v3.0 →** Autenticación JWT + Panel Administrativo  
+- **v4.0 →** SaaS multi-tenant para restaurantes  
+
+La arquitectura actual permite esa evolución sin reescribir el frontend.
+
+## 🔁 Reutilización Comercial
+
+Esta landing no es un caso aislado.
+
+Es una **plantilla comercializable**.
+
+Para adaptar a otro restaurante solo se modifican:
+
+- Datos  
+- Imágenes  
+- Paleta de colores  
+- Copy  
+
+La estructura, sistema de conversión y arquitectura permanecen intactos.
+
+## 💼 Valor Profesional del Proyecto
+
+Este proyecto demuestra:
+
+- Diseño orientado a conversión  
+- Arquitectura frontend organizada  
+- Modularidad real  
+- Disciplina estructural  
+- Capacidad de escalar hacia fullstack  
+- Calidad técnica vendible  
+
+No es solo una página bonita.  
+Es un sistema estructurado.
+
+## 🚀 Estado Actual
+
+- Sistema CSS: ✔ Completo  
+- Componentes: ✔ Implementados  
+- Arquitectura Modular: ✔ Establecida  
+- Responsive: ✔ Validado  
+- Performance: ✔ Optimizado  
+- Plantilla Comercial: ✔ Lista  
+
+## 📌 Conclusión
+
+**Brasa Urbana** es una base profesional para construir landings de restaurantes con enfoque real en negocio.
+
+Fue:
+
+- Pensado estratégicamente  
+- Estructurado arquitectónicamente  
+- Construido modularmente  
+- Optimizado técnicamente  
+- Diseñado para vender  
+
+No es solo una landing.
+
+Es el inicio de un sistema escalable para productos gastronómicos digitales.
