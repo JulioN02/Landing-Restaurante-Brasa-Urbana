@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   STATE-MENU.CSS - Estados del menú dinámico
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Contiene estados:
+   - .filter-button.is-active (filtro seleccionado)
+   - .product-card[data-state="visible"] (producto visible)
+   - .product-card[data-state="hidden"] (producto oculto)
+   - .product-card.is-filtered (animación de filtrado)
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FILTER BUTTON - ACTIVE
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.filter-button.is-active {
+  background: var(--color-primary-red);
+  border-color: var(--color-primary-red);
+  color: var(--color-text-on-dark);
+}
+
+.filter-button.is-active:hover {
+  background: var(--color-secondary-accent);
+  border-color: var(--color-secondary-accent);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   PRODUCT CARD - VISIBLE
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.product-card[data-state="visible"] {
+  animation: fadeIn 0.3s ease-out;
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   PRODUCT CARD - HIDDEN
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.product-card[data-state="hidden"],
+.product-card.is-hidden {
+  display: none;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   PRODUCT CARD - FILTERED (Transición)
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.product-card.is-filtered {
+  animation: filterScale 0.4s ease-out;
+}
+
+@keyframes filterScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - state-menu.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

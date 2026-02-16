@@ -1,0 +1,77 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FILTER.CSS - Componente filtro
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Contiene:
+   - .filter-button (botón filtro individual)
+   - Estados: default, hover, active, disabled
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FILTER-BUTTON - Botón filtro
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.filter-button {
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-light);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  
+  cursor: pointer;
+  transition: var(--transition-colors);
+  
+  /* Touch-friendly */
+  min-height: 40px;
+  min-width: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-button:hover {
+  border-color: var(--color-primary-red);
+  color: var(--color-primary-red);
+}
+
+.filter-button:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FILTER-BUTTON - ACTIVE STATE
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.filter-button.is-active,
+.filter-button[data-state="active"] {
+  background: var(--color-primary-red);
+  border-color: var(--color-primary-red);
+  color: var(--color-text-on-dark);
+}
+
+.filter-button.is-active:hover,
+.filter-button[data-state="active"]:hover {
+  background: var(--color-secondary-accent);
+  border-color: var(--color-secondary-accent);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FILTER-BUTTON - DISABLED STATE
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.filter-button:disabled,
+.filter-button.is-disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+  border-color: var(--color-border-secondary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - filter.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

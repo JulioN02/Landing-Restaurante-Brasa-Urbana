@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   ICONS.CSS - Estilos base para iconos
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Contiene:
+   - SVG base styles
+   - Emoji styles
+   - Icon sizing
+   - Icon colors
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SVG - Base
+   ─────────────────────────────────────────────────────────────────────────── */
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+}
+
+svg.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SVG - Tamaños
+   ─────────────────────────────────────────────────────────────────────────── */
+
+svg.icon-sm {
+  width: 16px;
+  height: 16px;
+}
+
+svg.icon-md {
+  width: 24px;
+  height: 24px;
+}
+
+svg.icon-lg {
+  width: 32px;
+  height: 32px;
+}
+
+svg.icon-xl {
+  width: 48px;
+  height: 48px;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SVG - Colores
+   ─────────────────────────────────────────────────────────────────────────── */
+
+svg.icon-primary {
+  color: var(--color-primary-red);
+}
+
+svg.icon-secondary {
+  color: var(--color-text-secondary);
+}
+
+svg.icon-light {
+  color: var(--color-text-light);
+}
+
+svg.icon-success {
+  color: var(--color-success);
+}
+
+svg.icon-warning {
+  color: var(--color-warning);
+}
+
+svg.icon-error {
+  color: var(--color-error);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   EMOJI - Estilos
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.emoji {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: inherit;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   ICON BUTTON - Botón con solo icono
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: var(--transition-colors);
+}
+
+.icon-button:hover {
+  background: var(--color-bg-secondary);
+  color: var(--color-primary-red);
+}
+
+.icon-button:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - icons.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SECTION-TESTIMONIALS.CSS - Testimonios de clientes
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Propósito: Validación social y confianza
+   Contiene: Título, lista de testimonios
+   Usado por: main > section.section-testimonials
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   CONTENEDOR PRINCIPAL
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-testimonials {
+  width: 100%;
+}
+
+.section-testimonials .container {
+  text-align: center;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   TÍTULO
+   ─────────────────────────────────────────────────────────────────────────── */
+
+#testimonials-title {
+  margin-bottom: var(--space-3xl);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   LISTA - Contenedor de testimonios
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.testimonials-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .testimonials-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonials-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - section-testimonials.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

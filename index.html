@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
   <title>Brasa Urbana | Parrilla Premium</title>
   <meta
     name="description"
@@ -18,7 +16,7 @@
 <body>
   <!--HEADER / NAV PRINCIPAL-->
   <header class="header" role="banner">
-    <div class="containter header-container">
+    <div class="container header-container">
       <a href="#" class="logo" aria-label="Inicio Brasa Urbana">
         Brasa Urbana
       </a>
@@ -30,20 +28,16 @@
           <li><a href="#ubicacion">Ubicacion</a></li>
         </ul>
       </nav>
-      <a 
-        href="#reserva"
-        class="button button-primary"
-        aria-label="Reservar Mesa"
-      >
+      <a href="#reserva" class="button button-primary" aria-label="Reservar Mesa">
         Reservar
       </a>
     </div>
   </header>
   <!--MAIN CONTENT-->
-  <main id="main-content">
+  <main id="main-content" class="main">
     <!-- HERO -->
     <section class="section-hero" id="hero" aria-label="hero-title">
-      <div class="containter hero-content">
+      <div class="container hero-content">
         <h1 id="hero-title">Siente el sabor del fuego</h1>
         <p class="hero-description">
           Parrilla premium sin formalidades. Cortes al carbon, ambiente urbano y reservas inmediatas.
@@ -60,6 +54,14 @@
       <div class="container">
         <h2 id="value-title">Nuestra Propuesta</h2>
         <p>Carnes premium cocinadas al carbon, ingredientes frescos y una experiencia moderna diseñada para compartir.</p>
+        <div class="value-features">  <!-- Agregar -->
+        <article class="feature-card">
+          <div class="feature-icon">🔥</div>
+          <h3>Carbón Premium</h3>
+          <p>Sabor dificil de encontrar con carbon dificil de importar</p>
+        </article>
+      <!-- Repetir -->
+    </div>
       </div>
     </section>
     <!-- MENÚ DINÁMICO -->
@@ -101,14 +103,15 @@
     </section>
     <!-- UBICACIÓN -->
     <section class="section-location" id="ubicacion" aria-labelledby="location-title">
-      <div>
+      <div class="container">
         <h2 id="location-title">Visitanos</h2>
         <p>
           Estamos ubicados en la zona gastronomica urbana. Reserva tu mesa y vive la experiencia Brasa Urbana.
         </p>
+        <p>📍 Dirección:</p>
+        <p>📞 Teléfono</p>
         <!-- Espacio reservado para integración futura (iframe / API) -->
         <div class="location-map" id="map-container">
-
         </div>
       </div>
     </section>
@@ -117,7 +120,7 @@
       <div class="container">
         <h2 id="cta-title">Reserva tu mesa ahora</h2>
         <p>Escribenos por WhatsApp y asegura tu experiencia</p>
-        <a href="#" id="Whatsapp-cta" class="button button-primary" aria-label="Reservar por WhatsApp">Reservar via WhatsApp</a>
+        <a href="#" id="whatsapp-cta" class="button button-primary" aria-label="Reservar por WhatsApp">Reservar via WhatsApp</a>
       </div>
     </section>
   </main>
@@ -134,4 +137,5 @@
     </div>
   </footer>
 </body>
+<link rel="stylesheet" href="/src/styles/main.css">
 </html>

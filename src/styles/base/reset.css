@@ -1,0 +1,222 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   RESET.CSS - Base limpia del proyecto
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Propósito: Normalizar el navegador y crear base consistente
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   BOX SIZING - Toda la página usa border-box
+   ─────────────────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   HTML Y BODY
+   ─────────────────────────────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   HEADINGS - h1 a h6
+   ─────────────────────────────────────────────────────────────────────────── */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-family-display);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  font-family: var(--font-family-display);
+}
+
+h3 {
+  font-size: var(--font-size-3xl);
+}
+
+h4 {
+  font-size: var(--font-size-2xl);
+}
+
+h5 {
+  font-size: var(--font-size-xl);
+}
+
+h6 {
+  font-size: var(--font-size-lg);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   PÁRRAFOS
+   ─────────────────────────────────────────────────────────────────────────── */
+
+p {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   LISTAS
+   ─────────────────────────────────────────────────────────────────────────── */
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   LINKS
+   ─────────────────────────────────────────────────────────────────────────── */
+
+a {
+  color: var(--color-primary-red);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-colors);
+}
+
+a:hover {
+  color: var(--color-secondary-accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   IMÁGENES
+   ─────────────────────────────────────────────────────────────────────────── */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img:not([alt]) {
+  border: 2px solid red;
+  background: yellow;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   BOTONES
+   ─────────────────────────────────────────────────────────────────────────── */
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   INPUTS Y FORMS
+   ─────────────────────────────────────────────────────────────────────────── */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   ELEMENTOS SEMÁNTICOS HTML5
+   ─────────────────────────────────────────────────────────────────────────── */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   HR
+   ─────────────────────────────────────────────────────────────────────────── */
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--color-border-primary);
+  margin: var(--space-2xl) 0;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   OTROS ELEMENTOS
+   ─────────────────────────────────────────────────────────────────────────── */
+
+code,
+pre {
+  font-family: 'Monaco', 'Courier New', monospace;
+  background: var(--color-bg-secondary);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+pre {
+  overflow-x: auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - reset.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

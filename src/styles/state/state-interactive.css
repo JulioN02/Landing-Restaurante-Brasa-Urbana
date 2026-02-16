@@ -1,0 +1,104 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   STATE-INTERACTIVE.CSS - Estados interactivos globales
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Contiene:
+   - :hover (pasar mouse)
+   - :focus-visible (navegación por teclado - accesibilidad)
+   - :active (hacer clic)
+   - Transiciones suaves
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   LINKS - Estados
+   ─────────────────────────────────────────────────────────────────────────── */
+
+a:hover {
+  color: var(--color-secondary-accent);
+  transition: var(--transition-colors);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+a:active {
+  opacity: var(--opacity-hover);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   CARDS - Hover
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.product-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   NAV LINKS - Estados
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.nav-link:hover {
+  color: var(--color-primary-red);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 4px;
+}
+
+.nav-link:active {
+  color: var(--color-secondary-accent);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FILTER BUTTONS - Estados
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.filter-button:hover {
+  border-color: var(--color-primary-red);
+  color: var(--color-primary-red);
+  transition: var(--transition-colors);
+}
+
+.filter-button:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+.filter-button:active {
+  transform: scale(0.98);
+  transition: var(--transition-fast);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   LOGO - Estados
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.logo:hover {
+  color: var(--color-primary-red);
+  transition: var(--transition-colors);
+}
+
+.logo:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - state-interactive.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

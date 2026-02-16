@@ -1,0 +1,80 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   NAV.CSS - Componente navegación
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Contiene:
+   - .nav (contenedor)
+   - .nav-list (lista)
+   - .nav-link (links)
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   NAV - Contenedor
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: block;
+    flex: 1;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   NAV-LIST - Lista de navegación
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.nav-list {
+  display: flex;
+  gap: var(--space-2xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   NAV-LINK - Links de navegación
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.nav-link {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  transition: var(--transition-colors);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-link:hover {
+  color: var(--color-primary-red);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 4px;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   NAV-LINK - ACTIVE STATE
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.nav-link[data-state="active"],
+.nav-link.is-active {
+  color: var(--color-primary-red);
+  border-bottom: 2px solid var(--color-primary-red);
+}
+
+.nav-link[data-state="active"]:hover,
+.nav-link.is-active:hover {
+  color: var(--color-secondary-accent);
+  border-bottom-color: var(--color-secondary-accent);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - nav.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

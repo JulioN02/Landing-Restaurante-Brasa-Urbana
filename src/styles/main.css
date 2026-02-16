@@ -1,0 +1,42 @@
+/* ORDEN CRÍTICO (Cascade importante) */
+
+/* 1. BASE - Reset y fundamentos */
+@import 'base/reset.css';
+@import 'base/typography.css';
+@import 'base/forms.css';
+@import 'base/icons.css';
+
+/* 2. LAYOUT - Estructura macro */
+@import 'layout/layout.css';          /* .container, .section-* */
+@import 'layout/header.css';
+@import 'layout/footer.css';
+@import 'layout/grid.css';
+
+/* 3. MODULE - Componentes reutilizables */
+@import 'modules/button.css';         /* Primero: muy reutilizado */
+@import 'modules/card.css';
+@import 'modules/nav.css';
+@import 'modules/logo.css';
+@import 'modules/filter.css';
+@import 'modules/rating.css';
+
+/* 4. MODULE - Secciones específicas */
+@import 'modules/section-hero.css';
+@import 'modules/section-value.css';
+@import 'modules/section-menu.css';
+@import 'modules/section-gallery.css';
+@import 'modules/section-testimonials.css';
+@import 'modules/section-location.css';
+@import 'modules/section-cta.css';
+
+/* 5. STATE - Interactividad y dinámismo */
+@import 'state/state-buttons.css';
+@import 'state/state-menu.css';
+@import 'state/state-interactive.css';
+@import 'state/state-dynamic.css';
+
+/* 6. THEME - Variables y colores */
+@import 'theme/theme-light.css';
+
+/* 7. RESPONSIVE - Media queries (último) */
+@import 'layout/responsive.css';

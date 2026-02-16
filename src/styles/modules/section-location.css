@@ -1,0 +1,50 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SECTION-LOCATION.CSS - Ubicación del restaurante
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Propósito: Mostrar dónde está ubicado
+   Contiene: Información de contacto, contenedor para mapa
+   Usado por: main > section.section-location
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   CONTENEDOR PRINCIPAL
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-location {
+  width: 100%;
+}
+
+.section-location .container {
+  text-align: center;
+}
+
+.section-location h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.section-location > p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin: 0 auto var(--space-2xl);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   MAP CONTAINER - Para integración futura de mapa
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.location-map {
+  width: 100%;
+  min-height: 400px;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: var(--border-light);
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - section-location.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

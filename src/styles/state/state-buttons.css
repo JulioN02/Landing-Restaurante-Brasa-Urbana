@@ -1,0 +1,99 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   STATE-BUTTONS.CSS - Estados de botones
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Contiene estados dinámicos:
+   - .is-active (botón activo)
+   - .is-disabled (deshabilitado)
+   - :hover, :focus, :active (pseudo-clases)
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   HOVER - Estado al pasar el mouse
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.button:hover {
+  transition: var(--transition-colors);
+}
+
+.button-primary:hover {
+  background: var(--color-secondary-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.button-secondary:hover {
+  background: var(--color-primary-red);
+  color: var(--color-text-on-dark);
+}
+
+.button-tertiary:hover {
+  color: var(--color-secondary-accent);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FOCUS - Estado al enfocar (accesibilidad)
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.button:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   ACTIVE - Estado al hacer clic
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.button:active {
+  transition: var(--transition-fast);
+}
+
+.button-primary:active {
+  background: #7a2626;
+  transform: translateY(0);
+}
+
+.button-secondary:active {
+  background: var(--color-secondary-accent);
+  border-color: var(--color-secondary-accent);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   IS-ACTIVE - Clase de estado activo
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.button.is-active {
+  background: var(--color-primary-red);
+  color: var(--color-text-on-dark);
+  border-color: var(--color-primary-red);
+}
+
+.button.is-active:hover {
+  background: var(--color-secondary-accent);
+  border-color: var(--color-secondary-accent);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   IS-DISABLED - Clase de estado deshabilitado
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.button.is-disabled,
+.button:disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+  background: var(--color-secondary-muted);
+  color: var(--color-text-light);
+  box-shadow: none;
+  transform: none;
+}
+
+.button.is-disabled:hover {
+  background: var(--color-secondary-muted);
+  transform: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - state-buttons.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

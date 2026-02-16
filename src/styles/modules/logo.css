@@ -1,0 +1,49 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   LOGO.CSS - Componente logo
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Contiene:
+   - .logo (contenedor logo)
+   - .logo img (imagen logo)
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   LOGO - Contenedor
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  transition: var(--transition-colors);
+}
+
+.logo:hover {
+  color: var(--color-primary-red);
+}
+
+.logo:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   LOGO - IMAGEN
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - logo.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

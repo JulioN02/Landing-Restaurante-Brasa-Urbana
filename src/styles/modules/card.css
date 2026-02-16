@@ -1,0 +1,197 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   CARD.CSS - Componentes card reutilizables
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Tipos:
+   1. .product-card (imagen + contenido)
+   2. .testimonial-card (avatar + texto)
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   PRODUCT CARD - Cards de productos menú
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  
+  background: var(--color-bg-primary);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-border-accent);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   PRODUCT CARD - IMAGE
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.product-card-image {
+  width: 100%;
+  aspect-ratio: var(--aspect-ratio-product);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   PRODUCT CARD - CONTENT
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.product-card-content {
+  flex: 1;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.product-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.product-card-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  flex: 1;
+  margin: 0;
+}
+
+.product-card-price {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-red);
+  margin: 0;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   PRODUCT CARD - ACTIONS
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.product-card-actions {
+  padding: 0 var(--space-lg) var(--space-lg);
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   PRODUCT CARD - FEATURED VARIANT
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.product-card.is-featured {
+  border: var(--border-accent);
+  box-shadow: var(--shadow-red);
+  position: relative;
+}
+
+.product-card.is-featured::before {
+  content: 'DESTACADO';
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: var(--color-primary-red);
+  color: var(--color-text-on-dark);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   TESTIMONIAL CARD - Cards de testimonios
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.testimonial-card {
+  padding: var(--space-lg);
+  background: var(--color-bg-secondary);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   TESTIMONIAL CARD - HEADER
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.testimonial-card-header {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.testimonial-card-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-card-name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.testimonial-card-role {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   TESTIMONIAL CARD - RATING
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.testimonial-card-rating {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.testimonial-card-rating .star {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary-red);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   TESTIMONIAL CARD - TEXT
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.testimonial-card-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - card.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

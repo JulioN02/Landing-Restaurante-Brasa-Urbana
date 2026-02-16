@@ -1,0 +1,87 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SECTION-GALLERY.CSS - Galería de ambiente
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Propósito: Mostrar ambiente del restaurante
+   Contiene: Título, grid de imágenes
+   Usado por: main > section.section-gallery
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   CONTENEDOR PRINCIPAL
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-gallery {
+  width: 100%;
+}
+
+.section-gallery .container {
+  text-align: center;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   TÍTULO
+   ─────────────────────────────────────────────────────────────────────────── */
+
+#gallery-title {
+  margin-bottom: var(--space-3xl);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   GRID - Imágenes
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   ITEMS - Contenedor de imagen
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 1 / 1;
+  
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.gallery-item:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  
+  transition: var(--transition-transform);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - section-gallery.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

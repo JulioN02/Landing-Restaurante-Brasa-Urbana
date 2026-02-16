@@ -1,0 +1,166 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SECTION-MENU.CSS - Menú dinámico con filtros
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Propósito: Mostrar menú con filtros por categoría
+   Contiene: Encabezado, filtros, grid de productos
+   Usado por: main > section.section-menu
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   CONTENEDOR PRINCIPAL
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-menu {
+  width: 100%;
+}
+
+.section-menu > div {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .section-menu > div {
+    padding: 0 var(--space-2xl);
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-menu > div {
+    padding: 0 var(--space-3xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SECTION HEADER - Título y descripción
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.section-header p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FILTROS - Botones de categoría
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.menu-filters button {
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-light);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  
+  cursor: pointer;
+  transition: var(--transition-colors);
+  
+  /* Touch-friendly */
+  min-height: 40px;
+  min-width: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-filters button:hover {
+  border-color: var(--color-primary-red);
+  color: var(--color-primary-red);
+}
+
+.menu-filters button.is-active {
+  background: var(--color-primary-red);
+  border-color: var(--color-primary-red);
+  color: var(--color-text-on-dark);
+}
+
+.menu-filters button.is-active:hover {
+  background: var(--color-secondary-accent);
+  border-color: var(--color-secondary-accent);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   GRID - Productos
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 640px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   ESTADO: Loading
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-menu[data-state="loading"] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.section-menu[data-state="loading"]::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-border-primary);
+  border-top-color: var(--color-primary-red);
+  border-radius: 50%;
+  animation: spinner 0.8s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spinner {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - section-menu.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

@@ -1,0 +1,59 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   HEADER.CSS - Diseño específico del header
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-fixed);
+  
+  width: 100%;
+  height: var(--header-height-mobile);
+  
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  border-bottom: var(--border-light);
+  
+  transition: var(--transition-colors);
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: var(--header-height);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   HEADER CONTAINER - Flex con distribucion
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.header-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  
+  padding: 0 var(--space-lg);
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    padding: 0 var(--space-2xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   ESTADO: Scrolled
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.header[data-state="scrolled"] {
+  background: var(--color-bg-dark);
+  border-bottom-color: var(--color-border-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.header[data-state="scrolled"] a {
+  color: var(--color-text-on-dark);
+}

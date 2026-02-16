@@ -7,7 +7,7 @@ export const productosData: Producto[] = [
     descripcion: "500g de corte premium acompañado de papas rústicas.",
     precio: 120000,
     categoria: "cortes",
-    imagen: "/assets/images/tomahawk.jpg",
+    imagen: "./src/assets/featured/tomahack.jpeg",
     esDestacado: true
   },
   {

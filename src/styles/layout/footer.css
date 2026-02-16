@@ -1,0 +1,36 @@
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FOOTER.CSS - Diseño específico del footer
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+.footer {
+  background: var(--color-bg-dark);
+  color: var(--color-text-on-dark);
+  padding: var(--space-3xl) var(--space-lg);
+  border-top: var(--border-width-thin) solid var(--color-border-dark);
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: var(--space-3xl) var(--space-2xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FOOTER CONTENT
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.footer p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.footer a {
+  color: var(--color-secondary-gold);
+}
+
+.footer a:hover {
+  color: var(--color-primary-warm);
+}

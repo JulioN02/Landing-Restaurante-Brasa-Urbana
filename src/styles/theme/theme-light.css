@@ -1,0 +1,217 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SISTEMA DE VARIABLES CSS - BRASA URBANA
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Este archivo contiene TODAS las propiedades de diseño reutilizables.
+   
+   ESTRUCTURA:
+   1. Colores Base
+   2. Tipografía
+   3. Spacing System
+   4. Sombras y Profundidad
+   5. Bordes y Radios
+   6. Transiciones y Animaciones
+   7. Breakpoints
+   8. Z-Index
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+:root {
+  
+  /* ─────────────────────────────────────────────────────────────────────────
+     1. PALETA DE COLORES - BRASA URBANA
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --color-primary-dark: #1a1a1a;
+  --color-primary-red: #8b2e2e;
+  --color-primary-warm: #d4a574;
+  --color-primary-contrast: #ffffff;
+
+  --color-secondary-light: #2d2d2d;
+  --color-secondary-accent: #c85a54;
+  --color-secondary-gold: #e8b37f;
+  --color-secondary-muted: #666666;
+
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #555555;
+  --color-text-light: #999999;
+  --color-text-on-dark: #ffffff;
+  --color-text-inverse: #f5f5f5;
+
+  --color-success: #27ae60;
+  --color-warning: #f39c12;
+  --color-error: #e74c3c;
+  --color-info: #3498db;
+
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9f9f9;
+  --color-bg-dark: #1a1a1a;
+  --color-bg-overlay: rgba(26, 26, 26, 0.85);
+  --color-bg-muted: #eeeeee;
+
+  --color-border-primary: #e0e0e0;
+  --color-border-secondary: #d0d0d0;
+  --color-border-dark: #333333;
+  --color-border-accent: #8b2e2e;
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     2. TIPOGRAFÍA - JERARQUÍA Y LEGIBILIDAD
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+                      'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-family-serif: 'Georgia', 'Garamond', serif;
+  --font-family-display: 'Montserrat', 'Arial', sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem;
+  --font-size-3xl: 2.25rem;
+  --font-size-4xl: 3rem;
+  --font-size-5xl: 3.75rem;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     3. SPACING SYSTEM - Escala Consistente (Múltiplos de 8px)
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 5rem;
+  --space-5xl: 6rem;
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     4. SOMBRAS Y PROFUNDIDAD
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --shadow-xs: 0 1px 2px rgba(26, 26, 26, 0.05);
+  --shadow-sm: 0 2px 8px rgba(26, 26, 26, 0.1);
+  --shadow-md: 0 4px 16px rgba(26, 26, 26, 0.12);
+  --shadow-lg: 0 8px 24px rgba(26, 26, 26, 0.15);
+  --shadow-xl: 0 12px 32px rgba(26, 26, 26, 0.2);
+
+  --shadow-red: 0 4px 16px rgba(139, 46, 46, 0.2);
+  --shadow-red-strong: 0 8px 24px rgba(139, 46, 46, 0.3);
+
+  --shadow-inset-sm: inset 0 1px 2px rgba(26, 26, 26, 0.05);
+  --shadow-inset-md: inset 0 2px 4px rgba(26, 26, 26, 0.1);
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     5. BORDES Y RADIOS
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --border-width-thin: 1px;
+  --border-width-normal: 2px;
+  --border-width-thick: 3px;
+
+  --radius-none: 0;
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  --border-light: var(--border-width-thin) solid var(--color-border-primary);
+  --border-dark: var(--border-width-thin) solid var(--color-border-dark);
+  --border-accent: var(--border-width-normal) solid var(--color-border-accent);
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     6. TRANSICIONES Y ANIMACIONES
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-very-slow: 800ms;
+
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  --transition-fast: all var(--duration-fast) var(--ease-out);
+  --transition-normal: all var(--duration-normal) var(--ease-in-out);
+  --transition-colors: color var(--duration-fast) var(--ease-out), 
+                       background-color var(--duration-fast) var(--ease-out),
+                       border-color var(--duration-fast) var(--ease-out);
+  --transition-transform: transform var(--duration-normal) var(--ease-in-out);
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     7. BREAKPOINTS - Responsive Design (Mobile-First)
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-2xl: 1920px;
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     8. Z-INDEX SCALE
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --z-dropdown: 1000;
+  --z-fixed: 1020;
+  --z-floating-btn: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-notification: 1070;
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     9. TAMAÑOS DE CONTENEDOR
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     10. OPACIDAD
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --opacity-disabled: 0.5;
+  --opacity-hover: 0.85;
+  --opacity-overlay: 0.85;
+  --opacity-modal: 0.95;
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     11. ASPECT RATIOS
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --aspect-ratio-square: 1 / 1;
+  --aspect-ratio-portrait: 3 / 4;
+  --aspect-ratio-landscape: 16 / 9;
+  --aspect-ratio-wide: 21 / 9;
+  --aspect-ratio-product: 4 / 3;
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     12. VALORES ESPECIALES
+     ───────────────────────────────────────────────────────────────────────── */
+
+  --header-height: 70px;
+  --header-height-mobile: 60px;
+  --nav-height: 50px;
+
+}

@@ -33,6 +33,7 @@ export type Testimonio = {
   nombreCliente: string;
   comentario: string;
   calificacion: 1 | 2 | 3 | 4 | 5;
+  imagen: string,
 };
 
 // =============================

@@ -1,0 +1,353 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   LAYOUT.CSS - Estructura global y contenedores
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Define:
+   - .container (responsive)
+   - .section-* base styles
+   - Grid helpers
+   
+   Usado por: Todas las secciones
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   CONTENEDOR PRINCIPAL - .container
+   
+   Propósito: Ancho máximo responsive con padding lateral
+   Usado en: Casi todas las secciones
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  max-width: 100%;
+}
+
+/* Mobile (default - 0px+) */
+/* El container base es full width con padding lateral */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+    padding: 0 var(--space-2xl);
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+    padding: 0 var(--space-2xl);
+  }
+}
+
+/* Large (1440px+) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--container-xl);
+    padding: 0 var(--space-3xl);
+  }
+}
+
+/* Extra Large (1920px+) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: var(--container-2xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   VARIANTES DE CONTENEDOR
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.container-sm {
+  max-width: var(--container-sm);
+}
+
+.container-md {
+  max-width: var(--container-md);
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+}
+
+.container-xl {
+  max-width: var(--container-xl);
+}
+
+.container-full {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SECCIONES - Base style para todas
+   
+   Propósito: Padding consistente entre secciones
+   Patrón: section-{nombre}
+   ─────────────────────────────────────────────────────────────────────────── */
+
+section {
+  width: 100%;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SECTION-HERO - Full viewport
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SECTION-VALUE - Propuesta de valor
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-value {
+  padding: var(--space-3xl) var(--space-lg);
+  background: var(--color-bg-primary);
+}
+
+@media (min-width: 1024px) {
+  .section-value {
+    padding: var(--space-4xl) var(--space-2xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SECTION-MENU - Menú dinámico
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-menu {
+  padding: var(--space-3xl) var(--space-lg);
+  background: var(--color-bg-primary);
+}
+
+@media (min-width: 1024px) {
+  .section-menu {
+    padding: var(--space-4xl) var(--space-2xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SECTION-GALLERY - Galería
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-gallery {
+  padding: var(--space-3xl) var(--space-lg);
+  background: var(--color-bg-secondary);
+}
+
+@media (min-width: 1024px) {
+  .section-gallery {
+    padding: var(--space-4xl) var(--space-2xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SECTION-TESTIMONIALS - Testimonios
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-testimonials {
+  padding: var(--space-3xl) var(--space-lg);
+  background: var(--color-bg-primary);
+}
+
+@media (min-width: 1024px) {
+  .section-testimonials {
+    padding: var(--space-4xl) var(--space-2xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SECTION-LOCATION - Ubicación
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-location {
+  padding: var(--space-3xl) var(--space-lg);
+  background: var(--color-bg-primary);
+}
+
+@media (min-width: 1024px) {
+  .section-location {
+    padding: var(--space-4xl) var(--space-2xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SECTION-CTA - Call to action final
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-cta {
+  padding: var(--space-3xl) var(--space-lg);
+  background: linear-gradient(135deg, 
+              var(--color-primary-dark) 0%, 
+              var(--color-primary-red) 100%);
+  color: var(--color-text-on-dark);
+}
+
+@media (min-width: 1024px) {
+  .section-cta {
+    padding: var(--space-4xl) var(--space-2xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   GRIDS GLOBALES
+   
+   Propósito: Grids reutilizables para contenido
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+/* Grid automático responsive */
+.grid-auto {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid-auto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-auto {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .grid-auto {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FLEXBOX HELPERS
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-md {
+  gap: var(--space-md);
+}
+
+.gap-lg {
+  gap: var(--space-lg);
+}
+
+.gap-xl {
+  gap: var(--space-xl);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   UTILITIES GLOBALES SIMPLES
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+
+.my-lg {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   OVERFLOW Y RESPONSIVIDAD
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   DISPLAY HELPERS
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - layout.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/

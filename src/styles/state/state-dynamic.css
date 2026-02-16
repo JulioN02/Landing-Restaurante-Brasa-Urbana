@@ -1,0 +1,101 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   STATE-DYNAMIC.CSS - Estados dinámicos controlados por JavaScript
+   ═══════════════════════════════════════════════════════════════════════════════
+   
+   Contiene:
+   - .is-loading (cargando)
+   - .is-hidden (oculto)
+   - .is-visible (visible)
+   - Animaciones de carga
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
+
+/* ───────────────────────────────────────────────────────────────────────────
+   IS-LOADING - Estado de carga
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.is-loading {
+  pointer-events: none;
+  opacity: var(--opacity-disabled);
+  position: relative;
+}
+
+.is-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--color-border-primary);
+  border-top-color: var(--color-primary-red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   IS-HIDDEN - Elemento oculto
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.is-hidden {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   IS-VISIBLE - Elemento visible
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.is-visible {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  animation: fadeInDisplay 0.4s ease-out;
+}
+
+@keyframes fadeInDisplay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SKELETON - Loading placeholder (futuro)
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-muted) 0%,
+    var(--color-bg-secondary) 50%,
+    var(--color-bg-muted) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FIN - state-dynamic.css
+   ═══════════════════════════════════════════════════════════════════════════════
+*/
