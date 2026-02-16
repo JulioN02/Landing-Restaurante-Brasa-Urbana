@@ -7,11 +7,13 @@ export const renderProductos = (
   contenedor.innerHTML = productos
     .map(
       (producto) => `
-      <article class="menu-card">
-        <img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy"/>
-        <h3>${producto.nombre}</h3>
-        <p>${producto.descripcion}</p>
-        <strong>$${producto.precio.toLocaleString()}</strong>
+      <article class="product-card">
+        <img src="${producto.imagen}" alt="${producto.nombre}" class="product-card-image" loading="lazy"/>
+        <div class="product-card-content">
+          <h3 class="product-card-title">${producto.nombre}</h3>
+          <p class="product-card-description">${producto.descripcion}</p>
+          <strong class="product-card-price">$${producto.precio.toLocaleString()}</strong>
+        </div>
       </article>
     `
     )
@@ -23,11 +25,13 @@ export const renderProductoDestacado = (
   producto: Producto
 ): void => {
   contenedor.innerHTML = `
-    <article class="featured-product">
-      <img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy"/>
-      <h2>${producto.nombre}</h2>
-      <p>${producto.descripcion}</p>
-      <strong>$${producto.precio.toLocaleString()}</strong>
+    <article class="product-card is-featured">
+      <img src="${producto.imagen}" alt="${producto.nombre}" class="product-card-image" loading="lazy"/>
+      <div class="product-card-content">
+        <h3 class="product-card-title">${producto.nombre}</h3>
+        <p class="product-card-description">${producto.descripcion}</p>
+        <strong class="product-card-price">$${producto.precio.toLocaleString()}</strong>
+      </div>
     </article>
   `;
 };

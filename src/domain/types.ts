@@ -47,3 +47,13 @@ export type Restaurante = {
   horario: string;
   mensajeReservaBase: string;
 };
+
+// =============================
+// GALERIA
+// =============================
+
+export type ImagenGaleria = {
+  id: string;
+  url: string;
+  alt: string;
+};

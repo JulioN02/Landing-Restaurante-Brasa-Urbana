@@ -1,6 +1,7 @@
 import {
   obtenerProductos,
-  obtenerDestacado
+  obtenerDestacado,
+  obtenerCategorias
 } from "../application/productService";
 
 import {
@@ -8,11 +9,17 @@ import {
 } from "../application/testimonialService";
 
 import {
+  obtenerGaleria
+} from "../application/galleryService";
+
+import {
   obtenerRestaurante
 } from "../application/restaurantService";
 
 import { renderProductos, renderProductoDestacado } from "./render/productRender";
+import { renderFiltros } from "./render/filterRender";
 import { renderTestimonios } from "./render/testimonialRender";
+import { renderGaleria } from "./render/galleryRender";
 import { renderFooter } from "./render/restaurantRender";
 
 import { initMenuHandler } from "./handlers/menuHandler";
@@ -20,17 +27,23 @@ import { initReservationHandler } from "./handlers/reservationHandler";
 
 export const initUI = (): void => {
   const menuContainer = document.getElementById("menu-container");
+  const filterContainer = document.getElementById("menu-filters");
   const testimonialContainer = document.getElementById("testimonials-container");
-  const footerContainer = document.querySelector(".footer p");
+  const galleryContainer = document.getElementById("gallery-container");
 
   if (menuContainer) {
     const productos = obtenerProductos();
     renderProductos(menuContainer, productos);
 
+    if (filterContainer) {
+      const categorias = obtenerCategorias();
+      renderFiltros(filterContainer, categorias);
+    }
+
     const destacado = obtenerDestacado();
     if (destacado) {
-      const hero = document.getElementById("hero");
-      if (hero) renderProductoDestacado(hero, destacado);
+      const featuredContainer = document.getElementById("featured-container");
+      if (featuredContainer) renderProductoDestacado(featuredContainer, destacado);
     }
   }
 
@@ -39,10 +52,13 @@ export const initUI = (): void => {
     renderTestimonios(testimonialContainer, testimonios);
   }
 
-  if (footerContainer) {
-    const restaurante = obtenerRestaurante();
-    renderFooter(footerContainer as HTMLElement, restaurante);
+  if (galleryContainer) {
+    const imagenes = obtenerGaleria();
+    renderGaleria(galleryContainer, imagenes);
   }
+
+  const restaurante = obtenerRestaurante();
+  renderFooter(restaurante);
 
   initMenuHandler();
   initReservationHandler();

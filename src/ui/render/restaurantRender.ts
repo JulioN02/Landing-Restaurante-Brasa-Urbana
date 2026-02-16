@@ -1,10 +1,11 @@
 import type { Restaurante } from "../../domain/types";
 
 export const renderFooter = (
-  contenedor: HTMLElement,
   restaurante: Restaurante
 ): void => {
-  const year = new Date().getFullYear();
+  const yearElement = document.getElementById("current-year");
+  const nameElement = document.getElementById("restaurant-name");
 
-  contenedor.textContent = `© ${year} ${restaurante.nombre}. Todos los derechos reservados.`;
+  if (yearElement) yearElement.textContent = new Date().getFullYear().toString();
+  if (nameElement) nameElement.textContent = restaurante.nombre;
 };

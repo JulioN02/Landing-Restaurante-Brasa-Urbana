@@ -1,4 +1,4 @@
-import { obtenerProductosPorCategoria } from "../../application/productService";
+import { obtenerProductosPorCategoria, obtenerProductos } from "../../application/productService";
 import type { Categoria } from "../../domain/types";
 import { renderProductos } from "../render/productRender";
 
@@ -10,12 +10,22 @@ export const initMenuHandler = (): void => {
 
   filtros.addEventListener("click", (event) => {
     const target = event.target as HTMLElement;
+    if (!target.classList.contains("filter-btn")) return;
 
-    const categoria = target.dataset.categoria as Categoria | undefined;
+    // Gestionar estado visual
+    filtros.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("is-active"));
+    target.classList.add("is-active");
+
+    const categoria = target.dataset.categoria;
 
     if (!categoria) return;
 
-    const productos = obtenerProductosPorCategoria(categoria);
-    renderProductos(contenedor, productos);
+    if (categoria === "todos") {
+      const productos = obtenerProductos();
+      renderProductos(contenedor, productos);
+    } else {
+      const productos = obtenerProductosPorCategoria(categoria as Categoria);
+      renderProductos(contenedor, productos);
+    }
   });
 };

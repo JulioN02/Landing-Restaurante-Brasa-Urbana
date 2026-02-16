@@ -7,8 +7,8 @@ export const productosData: Producto[] = [
     descripcion: "500g de corte premium acompañado de papas rústicas.",
     precio: 120000,
     categoria: "cortes",
-    imagen: "./src/assets/featured/tomahack.jpeg",
-    esDestacado: true
+    imagen: "/src/assets/images/featured/tomahack.jpeg",
+    esDestacado: true,
   },
   {
     id: "p2",
@@ -16,8 +16,8 @@ export const productosData: Producto[] = [
     descripcion: "Carne 200g, queso cheddar, cebolla caramelizada.",
     precio: 35000,
     categoria: "hamburguesas",
-    imagen: "/assets/images/burger.jpg",
-    esDestacado: false
+    imagen: "/src/assets/images/menu/hamburguesas/hamburguesa-artesanal.jpeg",
+    esDestacado: false,
   },
   {
     id: "p3",
@@ -25,8 +25,8 @@ export const productosData: Producto[] = [
     descripcion: "Entrada tradicional a la parrilla.",
     precio: 18000,
     categoria: "entradas",
-    imagen: "/assets/images/chorizo.jpg",
-    esDestacado: false
+    imagen: "/src/assets/images/menu/entradas/entrada-chorizo.jpg",
+    esDestacado: false,
   },
   {
     id: "p4",
@@ -34,7 +34,7 @@ export const productosData: Producto[] = [
     descripcion: "Acompañamiento crocante con salsa especial.",
     precio: 15000,
     categoria: "acompanamientos",
-    imagen: "/assets/images/papas.jpg",
-    esDestacado: false
-  }
+    imagen: "/src/assets/images/menu/acompañamientos/papas-rusticas.jpg",
+    esDestacado: false,
+  },
 ];

@@ -1,12 +1,14 @@
 import type {
   Producto,
   Testimonio,
-  Restaurante
+  Restaurante,
+  ImagenGaleria
 } from "../../domain/types";
 
 import { productosData } from "../data/productsData"
 import { testimoniosData } from "../data/testimonialsData";
 import { restauranteData } from "../data/restaurantData";
+import { galleryData } from "../data/galleryData";
 
 // =======================================
 // Restaurant Repository (Local v1)
@@ -23,5 +25,9 @@ export const restaurantRepository = {
 
   obtenerRestaurante(): Restaurante {
     return { ...restauranteData };
+  },
+
+  obtenerGaleria(): ImagenGaleria[] {
+    return [...galleryData];
   }
 };

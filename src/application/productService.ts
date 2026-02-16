@@ -28,3 +28,9 @@ export const obtenerProductosPorCategoria = (
 ): Producto[] => {
   return filtrarProductosPorCategoria(getProductosCache(), categoria);
 };
+
+export const obtenerCategorias = (): Categoria[] => {
+  const productos = getProductosCache();
+  const categorias = productos.map(p => p.categoria);
+  return Array.from(new Set(categorias));
+};

@@ -3,7 +3,7 @@
    ═══════════════════════════════════════════════════════════════════════════════
    
    Propósito: Explicar diferenciadores del restaurante
-   Contiene: Título, descripción, feature cards (futuro)
+   Contiene: Título, descripción, feature cards
    Usado por: main > section.section-value
    ═══════════════════════════════════════════════════════════════════════════════
 */
@@ -14,10 +14,29 @@
 
 .section-value {
   width: 100%;
+  background: linear-gradient(135deg, 
+              rgba(26, 26, 26, 0.95) 0%, 
+              rgba(40, 40, 40, 0.98) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-value::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b2323' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .section-value .container {
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* ───────────────────────────────────────────────────────────────────────────
@@ -26,6 +45,25 @@
 
 #value-title {
   margin-bottom: var(--space-lg);
+  color: var(--color-text-on-dark);
+  font-size: var(--font-size-4xl);
+  position: relative;
+  display: inline-block;
+}
+
+#value-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, 
+              transparent 0%, 
+              var(--color-primary-red) 50%, 
+              transparent 100%);
+  border-radius: 2px;
 }
 
 /* ───────────────────────────────────────────────────────────────────────────
@@ -33,10 +71,104 @@
    ─────────────────────────────────────────────────────────────────────────── */
 
 .section-value .container > p {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-secondary);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary-warm);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto var(--space-3xl);
+  line-height: 1.8;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FEATURE CARDS - Grid
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.value-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  margin-top: var(--space-3xl);
+}
+
+@media (min-width: 768px) {
+  .value-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FEATURE CARD - Individual
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+              var(--color-primary-red) 0%, 
+              var(--color-secondary-accent) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-primary-red);
+  box-shadow: 0 12px 40px rgba(139, 35, 35, 0.3);
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FEATURE ICON
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.feature-icon {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-lg);
+  filter: drop-shadow(0 4px 8px rgba(139, 35, 35, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   FEATURE TEXT
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.feature-card h3 {
+  color: var(--color-text-on-dark);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+}
+
+.feature-card p {
+  color: var(--color-primary-warm);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════

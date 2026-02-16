@@ -7,6 +7,6 @@ export const testimoniosData: Testimonio[] = [
     nombreCliente: "Andrés P.",
     comentario: "Ambiente moderno y servicio rápido.",
     calificacion: 5,
-    imagen: "/",
+    imagen: "/src/assets/images/testimonials/cliente-1.png",
   }
 ];
