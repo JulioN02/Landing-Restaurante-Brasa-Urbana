@@ -16,17 +16,122 @@
   <script type="module" src="/src/main.ts"></script>
 </head>
 <body>
-  <head>
+  <!--HEADER / NAV PRINCIPAL-->
+  <header class="header" role="banner">
+    <div class="containter header-container">
+      <a href="#" class="logo" aria-label="Inicio Brasa Urbana">
+        Brasa Urbana
+      </a>
+      <nav class="nav" aria-label="Navegacion principal">
+        <ul class="nav-list">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#ubicacion">Ubicacion</a></li>
+        </ul>
+      </nav>
+      <a 
+        href="#reserva"
+        class="button button-primary"
+        aria-label="Reservar Mesa"
+      >
+        Reservar
+      </a>
+    </div>
+  </header>
+  <!--MAIN CONTENT-->
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="section-hero" id="hero" aria-label="hero-title">
+      <div class="containter hero-content">
+        <h1 id="hero-title">Siente el sabor del fuego</h1>
+        <p class="hero-description">
+          Parrilla premium sin formalidades. Cortes al carbon, ambiente urbano y reservas inmediatas.
+        </p>
+        <div class="hero-cta">
+          <a href="#reserva" class="button button-primary" aria-label="Reservar ahora">
+            Reservar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- PROPUESTA DE VALOR -->
+    <section class="section-value" aria-labelledby="value-title">
+      <div class="container">
+        <h2 id="value-title">Nuestra Propuesta</h2>
+        <p>Carnes premium cocinadas al carbon, ingredientes frescos y una experiencia moderna diseñada para compartir.</p>
+      </div>
+    </section>
+    <!-- MENÚ DINÁMICO -->
+    <section class="section-menu" id="menu" aria-labelledby="menu-title">
+      <div>
+        <header class="section-header">
+          <h2 id="menu-title">Nuestro Menu</h2>
+          <p>Explora nuestras categorias y descubre tu corte favorito.</p>
+        </header>
+        <!-- Filtros dinámicos -->
+        <div class="menu-filters" id="menu-filters" role="tablist" aria-label="Filtros de categorias">
 
-  </head>
-  <main>
+        </div>
+        <!-- Contenedor de productos -->
+        <div class="menu-grid" id="menu-container" aria-live="polite">
 
+        </div>
+      </div>
+    </section>
+    <!-- GALERÍA -->
+    <section class="section-gallery" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title">Galeria</h2>
+        <!-- Render dinámico con lazy loading -->
+        <div class="gallery-grid" id="gallery-container">
+
+        </div>
+      </div>
+    </section>
+    <!-- TESTIMONIOS -->
+    <section class="section-testimonials" id="testimonios" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title">Lo que dicen nuestros clientes</h2>
+        <!-- Render dinámico -->
+        <div class="testimonials-list" id="testimonials-container">
+
+        </div>
+      </div>
+    </section>
+    <!-- UBICACIÓN -->
+    <section class="section-location" id="ubicacion" aria-labelledby="location-title">
+      <div>
+        <h2 id="location-title">Visitanos</h2>
+        <p>
+          Estamos ubicados en la zona gastronomica urbana. Reserva tu mesa y vive la experiencia Brasa Urbana.
+        </p>
+        <!-- Espacio reservado para integración futura (iframe / API) -->
+        <div class="location-map" id="map-container">
+
+        </div>
+      </div>
+    </section>
+    <!-- CTA FINAL -->
+    <section class="section-cta" id="reserva" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Reserva tu mesa ahora</h2>
+        <p>Escribenos por WhatsApp y asegura tu experiencia</p>
+        <a href="#" id="Whatsapp-cta" class="button button-primary" aria-label="Reservar por WhatsApp">Reservar via WhatsApp</a>
+      </div>
+    </section>
   </main>
-  <div>
-
+  <!--BOTÓN FLOTANTE MOBILE (CTA FIXED) -->
+  <div class="floating-cta">
+    <a href="#" id="floating-whatsapp-cta" class="button button-primary" aria-label="Reservar por WhatsApp">Reservar</a>
   </div>
-  <footer>
-    
+  <!--FOOTER-->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>
+        © <span id="current-year"></span> Brasa Urbana. Todos los Derechos reservados
+      </p>
+    </div>
   </footer>
 </body>
 </html>
